@@ -1,0 +1,36 @@
+/* ... 前面的代码保持不变 ... */
+
+/* ⌨️ Prompt 输入框 (从 JSX 抽离) */
+.prompt-input-area {
+  flex-shrink: 0;
+  min-height: 60px;
+  width: 100%;
+  min-width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  border-radius: 8px;
+  
+  /* 玻璃拟态背景 */
+  background: rgba(0, 0, 0, 0.3);
+  color: var(--text-primary, #eee);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  
+  resize: none;
+  font-size: 13px;
+  outline: none;
+  line-height: 1.5;
+  
+  /* 🔥 字体合并：代码体 + 中文黑体 */
+  font-family: 'JetBrains Mono', 'Noto Sans SC', monospace;
+  
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.prompt-input-area:focus {
+  border-color: rgba(59, 130, 246, 0.5); /* 聚焦时亮一点 */
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.prompt-input-area::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
